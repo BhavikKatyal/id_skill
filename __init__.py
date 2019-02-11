@@ -16,12 +16,12 @@ class D_Skill(MycroftSkill):
     @intent_file_handler('count1.intent')
     def handle_count(self, message):
         try:
-            number = int(message.data.get("number"))
+            number = message.data.get("number")
             response = {'number': message.data.get("number")}
             url = "https://xrrj3ql5ud.execute-api.us-east-1.amazonaws.com/Test/mycroft-skill-empno"
 
             key="{\n\t\"inputparams\":"
-            value=number
+            value="MTX"+number
             key1 = "\""+value+"\"\n}"
             payload = key + key1
             headers = {
