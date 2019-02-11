@@ -4,5 +4,5 @@
         "number": "001"
     },
     "intent_type": "count.intent",
-    "utterance": "Get me details of id MTX"
+    "utterance": "id"
 }
