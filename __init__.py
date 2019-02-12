@@ -20,9 +20,9 @@ class D_Skill(MycroftSkill):
             response = {'number': message.data.get("number")}
             b=""
             
-            for x in range(0,len(a)):
-                if(a[x]!=" "):
-                    b=b+a[x]
+            for x in range(0,len(number)):
+                if(number[x]!=" "):
+                    b=b+number[x]
                 
                         
             url = "https://xrrj3ql5ud.execute-api.us-east-1.amazonaws.com/Test/mycroft-skill-empno"
