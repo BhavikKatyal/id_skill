@@ -18,10 +18,16 @@ class D_Skill(MycroftSkill):
         try:
             number = message.data.get("number")
             response = {'number': message.data.get("number")}
+            b=""
+            
+            for x in range(0,len(a)):
+                if(a[x]!=" "):
+                    b=b+a[x]
+                        
             url = "https://xrrj3ql5ud.execute-api.us-east-1.amazonaws.com/Test/mycroft-skill-empno"
 
             key="{\n\t\"inputparams\":"
-            value="MTX"+number
+            value="MTX"+b
             key1 = "\""+value+"\"\n}"
             payload = key + key1
             headers = {
