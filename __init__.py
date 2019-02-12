@@ -39,12 +39,12 @@ class D_Skill(MycroftSkill):
             response = requests.request("POST", url, data=payload, headers=headers)
             data = json.loads(response.text)
             data2 = json.loads(data['body'])
-            id_emp = data2['emp_id']
+            name=data2['emp_name']
             designation=data2['designation']
             location=data2['location']
             birth_date=data2['birth_date']
             joining_date=data2['joining_date']
-            self.speak_dialog("{}, {}, location, {} , Birth Date , {} , Joining date, {}".format(id_emp,designation,location,birth_date,joining_date))
+            self.speak_dialog("{}, {}, location, {} , Birth Date , {} , Joining date, {}".format(name,designation,location,birth_date,joining_date))
             #self.speak_dialog("count_start", data=response)
             
         except:
