@@ -4,5 +4,5 @@
         "number": "001"
     },
     "intent_type": "count.intent",
-    "utterance": "number"
+    "utterance": "Details of employee"
 }
